@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Club Social y Deportivo Winifreda</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  color: #333;
+  background: linear-gradient(to bottom, #e1f5fe 0%, #ffffff 40%) repeat, url('img/estadio_winifreda.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(1.5px);
+  z-index: -1;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(255,255,255,0.85);
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header img { height: 60px; }
+header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.8rem;
+  color: #0077c2;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover { color: #0077c2; }
+section { padding: 40px 20px; text-align: center; }
+section h2 { font-size: 2rem; margin-bottom: 20px; color: #0077c2; }
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+  overflow-x: auto;
+}
+.noticia {
+  background: #e1f5fe;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  min-width: 250px;
+}
+.noticia h3 { font-size: 1.2rem; margin: 10px 0 5px; color: #0077c2; }
+.noticia p { font-size: 0.9rem; }
+.agenda-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.disciplina {
+  background: #e1f5fe;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.disciplina h3 { margin-bottom: 10px; color: #0077c2; }
+.escudos { display: flex; justify-content: center; gap: 10px; margin: 10px 0; }
+.escudos img { height: 50px; }
+.publicidad-banner { margin: 40px auto; max-width: 90%; border-radius: 12px; overflow: hidden; }
+.publicidad-banner img { width: 100%; display: block; opacity: 0.9; }
+@media (max-width: 768px) {
+  .noticias-grid { display: flex; overflow-x: scroll; }
+  .noticia { flex: 0 0 80%; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="img/escudo.png" alt="Escudo Winifreda">
+    <h1>Club Social y Deportivo Winifreda</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#agenda">Deportes</a></li>
+      <li><a href="#noticias">Noticias</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="https://www.deportivowinifreda.com.ar/csdwradio.html" target="_blank">Radio</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="noticias">
+  <h2>Noticias</h2>
+  <div class="noticias-grid">
+    <div class="noticia"><h3>Visita de Lanús</h3><p>Amistoso cargado de emoción en Winifreda.</p></div>
+    <div class="noticia"><h3>Nuevo Fixture</h3><p>Confirmado el camino del Depo en 2025.</p></div>
+    <div class="noticia"><h3>Santino Pieraligi</h3><p>Noche soñada en la cancha de Lanús.</p></div>
+    <div class="noticia"><h3>Pruebas de Jugadores</h3><p>Convocatoria abierta de Argentinos Juniors.</p></div>
+    <div class="noticia"><h3>Cena Aniversario</h3><p>Gran asado campero y baile con Manatial.</p></div>
+    <div class="noticia"><h3>Torneo Provincial</h3><p>El Depo jugará su 7° Provincial consecutivo.</p></div>
+    <div class="noticia"><h3>Taller Mental</h3><p>Entrenamiento para las Inferiores del club.</p></div>
+    <div class="noticia"><h3>Orgullo Girasolero</h3><p>Padres equipan a los jugadores formativos.</p></div>
+  </div>
+</section>
+<div class="publicidad-banner">
+  <img src="img/publicidad1.jpg" alt="Publicidad discreta">
+</div>
+<section id="agenda">
+  <h2>Agenda Deportiva</h2>
+  <div class="agenda-grid">
+    <div class="disciplina">
+      <h3>Fútbol - Primera División</h3>
+      <div class="escudos"><img src="img/escudos/futbol/independiente_pico.png"><img src="img/escudo.png"></div>
+      <p>Independiente Pico vs Winifreda</p><p>Domingo 7/9 - 16:00 hs</p>
+    </div>
+    <div class="disciplina">
+      <h3>Fútbol - Categorías Formativas</h3>
+      <div class="escudos"><img src="img/escudos/futbol/anguilense.png"><img src="img/escudo.png"></div>
+      <p>Anguilense vs Winifreda</p><p>Sábado 13/9 - 13 y 15 hs</p>
+    </div>
+    <div class="disciplina">
+      <h3>Fútbol - Categoría Seniors</h3>
+      <div class="escudos"><img src="img/escudos/senior/la_maruja.png"><img src="img/escudo.png"></div>
+      <p>La Maruja vs Winifreda</p><p>Domingo 7/9 - 15:30 hs</p>
+    </div>
+    <div class="disciplina">
+      <h3>Vóley - Liga Universitaria (Masculino)</h3>
+      <div class="escudos"><img src="img/escudos/voley/sportivo_toay.png"><img src="img/escudo.png"></div>
+      <p>Sportivo Toay vs Winifreda</p><p>Jueves 4/9 - 22:00 hs</p>
+    </div>
+    <div class="disciplina">
+      <h3>Vóley - Liga Universitaria (Femenino)</h3>
+      <div class="escudos"><img src="img/escudos/voley/escudo_voley_mar2024.png"><img src="img/escudo.png"></div>
+      <p>Mar 2024 vs Winifreda</p><p>Viernes 5/9 - 21:30 hs</p>
+    </div>
+  </div>
+</section>
+<footer id="contacto" style="text-align:center; padding:20px; background:rgba(255,255,255,0.9);
